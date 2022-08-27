@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid | Fr / Fraction</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ddd;
+    }
+
+    .container {
+      width: 60%;
+      margin: 50px auto;
+
+      display: grid;
+
+      /* fr / fraction units */
+      /* its like "flex" property in flexbox */
+      /*grid-template-columns: 1fr 2fr 50px;*/
+      
+      /* there is a way to make this simple without writing out the size for each column */
+      /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+
+      /* you can do this */
+      /*grid-auto-columns: 1fr;
+      grid-auto-flow: column;*/
+
+      /* but there is more simpler way */
+    }
+
+    .item {
+      background-color: rgb(138, 209, 254);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .item:nth-child(even) {
+      background-color: rgb(255, 142, 142);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+  </div>
+</body>
+
+</html>

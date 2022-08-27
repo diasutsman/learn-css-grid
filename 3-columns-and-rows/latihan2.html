@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid | Explicit & Implicit Grid</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ddd;
+    }
+
+    .container {
+      width: 60%;
+      margin: 50px auto;
+
+      display: grid;
+
+      /* Explicit Grid */
+      /* for rows, row that get specified will set the size as its size
+      and the rows after that will be set to "auto" */
+      /*grid-template-rows: 50px 100px 150px;*/
+
+
+      /* Implicit grid */
+      /*grid-auto-rows: 200px;*/
+
+
+      /* for columns, count of units specify the columns count
+      so the columns after that will wrap down */
+      grid-template-columns: 100px 50px;
+
+
+      /* specify the placement of item or cell in grid track including the one that written "explicitly"*/
+
+      /* more like the "direction" of the grid flow */
+      grid-auto-flow: column;
+      grid-template-rows: 50px 30px;
+
+    }
+
+    .item {
+      background-color: rgb(138, 209, 254);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .item:nth-child(even) {
+      background-color: rgb(255, 142, 142);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+  </div>
+</body>
+
+</html>
